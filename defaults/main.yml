@@ -1,0 +1,36 @@
+---
+# PERF
+# SOURCE: https://docs.openshift.com/container-platform/3.6/install_config/aggregate_logging_sizing.html
+# SOURCE: https://nickcanzoneri.com/centos/logging/journald/rsyslog/2017/08/18/losing-log-messages.html
+# SOURCE: https://www.rootusers.com/how-to-change-log-rate-limiting-in-linux/
+# # Disable rate limiting
+# RateLimitInterval=1s
+# RateLimitBurst=10000
+# Storage=volatile
+# Compress=no
+# MaxRetentionSec=30s
+boss__journald__journald_storage_option: "volatile"
+boss__journald__journald_compress_option: "no"
+boss__journald__journald_seal_option: "yes"
+boss__journald__journald_splitmode: "uid"
+boss__journald__journald_sync_interval: "5m"
+boss__journald__journald_rate_limit_interval: "1s"
+boss__journald__journald_rate_limit_burst: "10000"
+boss__journald__journald_system_max_use: ""
+boss__journald__journald_system_keep_free: ""
+boss__journald__journald_max_file_size: ""
+boss__journald__journald_runtime_max_use: ""
+boss__journald__journald_runtime_keep_free: ""
+boss__journald__journald_runtime_max_file_size: ""
+boss__journald__journald_max_retention_sec: "30s"
+boss__journald__journald_max_file_sec: "1month"
+boss__journald__journald_forward_to_syslog: "yes"
+boss__journald__journald_forward_to_kmsg: "no"
+boss__journald__journald_forward_to_console: "no"
+boss__journald__journald_forward_to_wall: "yes"
+boss__journald__journald_tty_path: "/dev/console"
+boss__journald__journald_max_level_store: "debug"
+boss__journald__journald_max_level_syslog: "debug"
+boss__journald__journald_max_level_kmsg: "notice"
+boss__journald__journald_max_level_console: "info"
+boss__journald__journald_max_level_wall: "emerg"

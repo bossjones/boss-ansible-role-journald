@@ -1,0 +1,19 @@
+# https://gist.github.com/gnarf/b103e77f37236ca72d8e
+:vms:
+  journald-box1:
+    :hostname: "journald-box1"
+    :ip: "192.168.50.104"
+    :ram: 2048
+    :cpu: 2
+    :box: "ubuntu/xenial64"
+    :id: 10
+
+:groups:
+  journald-box1:
+    - journald-box1
+  servers:
+    - journald-box1
+  kubernetes-journald-box1:
+    - journald-box1
+  kubernetes:
+    - journald-box1
